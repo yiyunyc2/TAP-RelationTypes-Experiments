@@ -1,0 +1,15 @@
+#Taxonomy 1 
+#Taxonomy 2 
+
+taxonomy T1 T1
+(A a b c)
+
+taxonomy T2 T2
+(B a b c)
+
+articulation T1-T2 
+
+[T1.a > T2.a]
+[T1.b > T2.b]
+[T1.c < T2.c]
+
