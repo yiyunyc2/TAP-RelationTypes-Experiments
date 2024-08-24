@@ -87,17 +87,25 @@ model
 
 dev.off()
 
+## New code 8/23, compute R2
+null_model = glm(pw_2 ~ 1, family = "poisson"(link = 'log'))
+glm_model3 = glm(pw_2 ~ equals_2 + includes_2 + included_in_2 + disjoint_2 + overlaps_2, family = "poisson"(link = 'log'))
+
+# Calculate McFadden's pseudo R-squared
+r_squared = 1 - logLik(glm_model3) / logLik(null_model)
+print(r_squared)
+
 
 ##############  Experiment 1b  ###################### 
 TAP_final = read.csv("Experiment-1b-output-summary.csv")
 TAP_final
 
-equals_5 = TAP_final$Equals
-includes_5 = TAP_final$Includes
+equals_5 = TAP_final$Equal
+includes_5 = TAP_final$Include
 included_in_5 = TAP_final$Included.in
 disjoint_5 = TAP_final$Disjoint
-overlaps_5 = TAP_final$Overlaps
-pw_5 = TAP_final$PWs
+overlaps_5 = TAP_final$Overlap
+pw_5 = TAP_final$Number.of.PWs
 pw_5
 
 ## histogram of raw data 
@@ -105,7 +113,7 @@ hist(pw_5)
 
 ##model 3
 #glm_model4 = glm(pw_3 ~ equals_3 + includes_3 + included_in_3 + disjoint_3 + overlaps_3, family="poisson"(link='log'))
-glm_model5 = glm(pw_5 ~ 0 + (equals_5 + includes_5 + included_in_5 + disjoint_5 + disjoint_5 + overlaps_5)^2, family="poisson"(link='log'))
+glm_model5 = glm(pw_5 ~ 0 + equals_5 + includes_5 + included_in_5 + disjoint_5 + disjoint_5 + overlaps_5, family="poisson"(link='log'))
 
 summary(glm_model5)
 
@@ -138,3 +146,11 @@ axis.title = c("Incidence Rate Ratio","hi", "hi")) + scale_x_discrete(labels=c("
 model
 
 dev.off()
+
+## New code 8/23, compute R2
+null_model = glm(pw_5 ~ 1, family = "poisson"(link = 'log'))
+glm_model3 = glm(pw_5 ~ equals_5 + includes_5 + included_in_5 + disjoint_5 + overlaps_5, family = "poisson"(link = 'log'))
+
+# Calculate McFadden's pseudo R-squared
+r_squared = 1 - logLik(glm_model3) / logLik(null_model)
+print(r_squared)
