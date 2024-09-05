@@ -7,12 +7,15 @@ To replay the experiments you can use the EulerX toolkit. There are two ways ava
 Please refer to the README of [euler2](https://github.com/rodenhausen/ASIST17/blob/master/euler2/README.md) for more information on how to run the use cases of the paper.
 
 ## Experiment 1a
-EulerX Taxonomy Alignment input files
+[EulerX Taxonomy Alignment input files](https://github.com/yiyunyc2/TAP-RelationTypes-Experiments/tree/58b64af2c770da50b1d4fea4732e0d5862a4c9db/Experiment-1a/Experiment-1a-EulerX-Input)
 
-Summary table for the experiment results 
+[Summary table for the experiment results](https://github.com/yiyunyc2/TAP-RelationTypes-Experiments/blob/58b64af2c770da50b1d4fea4732e0d5862a4c9db/Experiment-1a/Experiment-1a-output-summary.csv) 
 
 ## Experiment 1b
 
-EulerX Taxonomy Alignment input files
+[EulerX Taxonomy Alignment input files](https://github.com/yiyunyc2/TAP-RelationTypes-Experiments/tree/58b64af2c770da50b1d4fea4732e0d5862a4c9db/Experiment-1b/Experiment-1b-EulerX-Input)
 
-Summary table for the experiment results 
+[Summary table for the experiment results](https://github.com/yiyunyc2/TAP-RelationTypes-Experiments/blob/58b64af2c770da50b1d4fea4732e0d5862a4c9db/Experiment-1b/Experiment-1b-output-summary.csv) 
+
+## Generalized Linear Modeling
+[R script for GLM](https://github.com/yiyunyc2/TAP-RelationTypes-Experiments/blob/58b64af2c770da50b1d4fea4732e0d5862a4c9db/TAP_Experiments_1a_1b_GLMER.R)
